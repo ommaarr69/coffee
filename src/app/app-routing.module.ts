@@ -5,18 +5,25 @@ import { RegisterComponent } from './RegisterPage/register/register.component';
 import { StartPageComponent } from './StartPage/start-page/start-page.component';
 
 const routes: Routes = [
-  {path:'start', component:StartPageComponent},
-  {path:'', redirectTo:"/start", pathMatch:'full'},
-  {path:"admin",
+  { path: 'start', component: StartPageComponent },
+  { path: '', redirectTo: "/start", pathMatch: 'full' },
 
- loadChildren:()=>import('./Modules/admin/admin.module').then((m)=>m.AdminModule)},
-  {path:'login', component:LoginComponent},
-  {path:'register', component:RegisterComponent}
+  {
+    path: "admin",
+
+    loadChildren: () => import('./Modules/admin/admin.module').then((m) => m.AdminModule)
+  },
+
+  { path: 'login', component: LoginComponent },
+
+  { path: 'register', component: RegisterComponent },
+  { path: '**', redirectTo: "/start", pathMatch: 'full' }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }
-export const routingComponents=[StartPageComponent,LoginComponent,RegisterComponent]
+export const routingComponents = [StartPageComponent, LoginComponent, RegisterComponent]

@@ -6,15 +6,17 @@ import { HomeComponent } from '../Components/home/home.component';
 import { ProfileComponent } from '../Components/profile/profile.component';
 
 const routes: Routes = [
-  {path:'', component:AdminDashboardComponent,
-children:[
-  {path:'home', component: HomeComponent},
-  {path:'cart', component:CartComponent},
-  {path:'profile', component:ProfileComponent},
-  {path:'', redirectTo:"/admin/home", pathMatch:'full'}
-  
-  
-]}
+  {
+    path: '', component: AdminDashboardComponent,
+    children: [
+      { path: 'home', component: HomeComponent },
+      { path: 'cart', component: CartComponent },
+      { path: 'profile', component: ProfileComponent },
+      { path: '', redirectTo: "/admin/home", pathMatch: 'full' }
+
+
+    ]
+  }
 ];
 
 @NgModule({
