@@ -13,9 +13,7 @@ const routes: Routes = [
 
     loadChildren: () => import('./Modules/admin/admin.module').then((m) => m.AdminModule)
   },
-
-  { path: 'login', component: LoginComponent },
-
+  
   { path: 'register', component: RegisterComponent },
   { path: '**', redirectTo: "/start", pathMatch: 'full' }
 ];
