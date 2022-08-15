@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Products } from 'src/app/Products';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private cartService: CartService) { }
+  products:Products[]=[
+  
+  {Name:"Coffee" , Price:"100" , Description:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit exceptur"},
+  {Name:"Coffee" , Price:"100" , Description:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit exceptur"},
+  {Name:"Coffee" , Price:"100" , Description:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit exceptur"},
+  {Name:"Coffee" , Price:"100" , Description:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit exceptur"},
+  {Name:"Coffee" , Price:"100" , Description:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit exceptur"},
+  {Name:"Coffee" , Price:"100" , Description:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit exceptur"}
+];
 
   ngOnInit(): void {
+  }
+  addToCart(product: Products) {
+    this.cartService.addToCart(product);
+    window.alert('Your product has been added to the cart!');
   }
 
 }

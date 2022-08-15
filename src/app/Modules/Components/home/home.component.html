@@ -1,68 +1,17 @@
 <div class="row ">
-    <div class="col-md-4 mt-2">
+    <div class="col-md-4 mt-2" *ngFor="let product of products">
 
         <div class="item">
 
             <img src="../../../../assets/images/download.jfif" class="w-100" alt="">
-            <h2>Coffee</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit excepturi similique exercitationem
-                libero.</p>
+            <h2>{{product.Name}}</h2>
+            <h4>Price: {{product.Price}}</h4>
+            
+            <p>{{product.Description}}</p>
+                
+                <button (click)="addToCart(product)">BuyNow</button>
 
         </div>
     </div>
-    <div class="col-md-4 mt-2">
-
-        <div class="item">
-
-            <img src="../../../../assets/images/download.jfif" class="w-100" alt="">
-            <h2>Coffee</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit excepturi similique exercitationem
-                libero.</p>
-
-        </div>
-    </div>
-    <div class="col-md-4 mt-2">
-
-        <div class="item">
-
-            <img src="../../../../assets/images/download.jfif" class="w-100" alt="">
-            <h2>Coffee</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit excepturi similique exercitationem
-                libero.</p>
-
-        </div>
-    </div>
-    <div class="col-md-4 mt-2">
-
-        <div class="item">
-
-            <img src="../../../../assets/images/download.jfif" class="w-100" alt="">
-            <h2>Coffee</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit excepturi similique exercitationem
-                libero.</p>
-
-        </div>
-    </div>
-    <div class="col-md-4 mt-2">
-
-        <div class="item">
-
-            <img src="../../../../assets/images/download.jfif" class="w-100" alt="">
-            <h2>Coffee</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit excepturi similique exercitationem
-                libero.</p>
-
-        </div>
-    </div>
-    <div class="col-md-4 mt-2">
-        
-        <div class="item">
-
-            <img src="../../../../assets/images/download.jfif" class="w-100" alt="">
-            <h2>Coffee</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit excepturi similique exercitationem
-                libero.</p>
-
-        </div>
-    </div>
+    
 </div>
