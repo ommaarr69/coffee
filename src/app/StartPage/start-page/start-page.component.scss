@@ -1,10 +1,9 @@
-section{
+.cover {
     background-image: url('../../../assets/top-view-tasty-coffee-with-coffee-beans.jpg');
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: fixed;  
     background-size: cover;
-    height: 17cm;
-}
-.bckg-frm{
-    background-color: rgba(61, 52, 52, 0.7);
-}
+     height: 17cm;
+    
+    
+  }
