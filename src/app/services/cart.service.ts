@@ -24,11 +24,16 @@ export class CartService {
       if(this.items[i]==item){
         this.items[i]=this.items[this.items.length];
         this.items.pop();
+        localStorage.removeItem('cart');
         break;
       
       }
+
+      
       
     }
+    localStorage.setItem('cart', JSON.stringify(this.items));
+    
   }
 
   clearCart() {
