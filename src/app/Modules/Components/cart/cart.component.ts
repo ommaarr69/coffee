@@ -1,4 +1,4 @@
-import { Products } from './../../../Products';
+
 import { Component, OnInit } from '@angular/core';
 import { Products } from 'src/app/Products';
 import { CartService } from 'src/app/services/cart.service';
@@ -16,8 +16,9 @@ export class CartComponent implements OnInit {
   ngOnInit(): void {
   }
   RemoveItem(item:Products){
- this.cartService.removeitem(item);
+ this.cartService.clearCart();
  this.items = this.cartService.getItems();
+ 
   }
 
 }

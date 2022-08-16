@@ -19,14 +19,15 @@ export class CartService {
   }
 
   removeitem(item:Products){
-   let tempItems:Array<Products>=[];
+   
     for(let i=0;i<this.items.length;i++){
-      if(this.items[i]!=item){
-        tempItems.push(this.items[i]);
+      if(this.items[i]==item){
+        this.items[i]=this.items[this.items.length];
+        this.items.pop();
+        break;
       
       }
-      this.items=tempItems;
-
+      
     }
   }
 
