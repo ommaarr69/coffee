@@ -18,21 +18,12 @@ export class CartService {
     return this.items;
   }
 
-  removeitem(item:Products){
+  removeitem(i:number){
    
-    for(let i=0;i<this.items.length;i++){
-      if(this.items[i]==item){
-        this.items[i]=this.items[this.items.length];
-        this.items.pop();
-        localStorage.removeItem('cart');
-        break;
+    this.items.splice(i,1);
       
-      }
-
-      
-      
-    }
     localStorage.setItem('cart', JSON.stringify(this.items));
+    
     
   }
 
