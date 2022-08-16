@@ -9,12 +9,10 @@ const routes: Routes = [
   {
     path: '', component: AdminDashboardComponent,
     children: [
+      { path: '', redirectTo: "/admin/home", pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
       { path: 'cart', component: CartComponent },
-      { path: 'profile', component: ProfileComponent },
-      { path: '', redirectTo: "/admin/home", pathMatch: 'full' }
-
-
+      { path: 'profile', component: ProfileComponent }
     ]
   }
 ];

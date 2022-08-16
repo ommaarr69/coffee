@@ -14,7 +14,7 @@
               </div>
               <div class="col-md-3 col-lg-3 col-xl-3">
                 <p class="lead fw-normal mb-2">{{item.Name}}</p>
-                <p><span class="text-muted">Size: </span>M <span class="text-muted">Color: </span>Grey</p>
+
               </div>
               <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
                 <button class="btn btn-link px-2"
@@ -34,6 +34,9 @@
                 <h5 class="mb-0">{{item.Price}} LE</h5>
               </div>
               <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+
+                <a class="text-danger "><i class="fas fa-trash fa-lg"></i></a>
+
                 <button (click)="RemoveItem(item)" class="text-danger"><i class="fas fa-trash fa-lg"></i></button>
               </div>
             </div>

@@ -33,9 +33,9 @@ export class AuthService {
         return this._HttpClient.post(`https://route-egypt-api.herokuapp.com/signin`, data)
     }
     logout() {
-        localStorage.removeItem('userToken');
+        localStorage.clear();
         this.userData.next(null);
-        this._Router.navigate(['/Login'])
+        this._Router.navigate(['/Login']);
     }
 
 }
