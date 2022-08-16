@@ -17,6 +17,8 @@ export class HomeComponent implements OnInit {
     { Name: "Coffee", imgSrc: "../../../../assets/images/download.jfif", Price: "100", Description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit exceptur" },
     { Name: "Coffee", imgSrc: "../../../../assets/images/download.jfif", Price: "100", Description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit exceptur" },
     { Name: "Coffee", imgSrc: "../../../../assets/images/download.jfif", Price: "100", Description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit exceptur" },
+    { Name: "Coffee", imgSrc: "../../../../assets/images/download.jfif", Price: "100", Description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit exceptur" },
+    { Name: "Coffee", imgSrc: "../../../../assets/images/download.jfif", Price: "100", Description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit exceptur" },
     { Name: "Coffee", imgSrc: "../../../../assets/images/download.jfif", Price: "100", Description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit exceptur" }
   ];
 
@@ -24,7 +26,6 @@ export class HomeComponent implements OnInit {
   }
   addToCart(product: Products) {
     this.cartService.addToCart(product);
-    window.alert('Your product has been added to the cart!');
   }
 
 }

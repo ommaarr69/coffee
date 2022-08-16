@@ -1,5 +1,5 @@
 <div class="row ">
-    <div class="col-md-4 mt-2" *ngFor="let product of products">
+    <div class="col-md-3 mt-2 p-3 shadow" *ngFor="let product of products">
 
         <div class="item">
 
@@ -9,7 +9,7 @@
 
             <p>{{product.Description}}</p>
 
-            <button class="btn-primary btn" (click)="addToCart(product)">BuyNow</button>
+            <button class="btn" (click)="addToCart(product)"><i class="fa-solid fa-cart-plus"></i> Add to cart</button>
 
         </div>
     </div>

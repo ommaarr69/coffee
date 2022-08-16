@@ -9,9 +9,11 @@ export class CartService {
 
   addToCart(product: Products) {
     this.items.push(product);
+    localStorage.setItem('cart', JSON.stringify(this.items));
   }
-
+  
   getItems() {
+    this.items = JSON.parse(localStorage.getItem('cart')?localStorage.getItem('cart') : '[]');
     return this.items;
   }
 
