@@ -10,8 +10,8 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup = new FormGroup({
-    Email: new FormControl(null, [Validators.required, Validators.email]),
-    Password: new FormControl(null, [Validators.required, Validators.pattern(/^[A-Z][A-Za-z0-9]{8,16}$/)]),
+    email: new FormControl(null, [Validators.required, Validators.email]),
+    password: new FormControl(null, [Validators.required, Validators.pattern(/^[A-Z][A-Za-z0-9]{8,16}$/)]),
   });
 
   errorMessage: string = '';
@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
         if (res.message == "success") {
           localStorage.setItem('userToken', res.token)
           this._AuthService.encodedData();
-          this._router.navigate(['/Home'])
+          this._router.navigate(['../admin/home']);
         }
         else {
           this.errorMessage = res.message;
@@ -42,9 +42,6 @@ export class LoginComponent implements OnInit {
         console.log("done");
       }
     )
-  }
-  Login() {
-    this._router.navigate(["../admin"])
   }
 
 }
