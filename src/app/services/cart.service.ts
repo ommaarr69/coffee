@@ -9,10 +9,23 @@ export class CartService {
 
   addToCart(product: Products) {
     this.items.push(product);
+  
   }
 
   getItems() {
     return this.items;
+  }
+
+  removeitem(item:Products){
+   let tempItems:Array<Products>=[];
+    for(let i=0;i<this.items.length;i++){
+      if(this.items[i]!=item){
+        tempItems.push(this.items[i]);
+      
+      }
+      this.items=tempItems;
+
+    }
   }
 
   clearCart() {
