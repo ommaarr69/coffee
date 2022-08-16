@@ -4,35 +4,37 @@
             <div class="row d-flex align-items-center justify-content-center">
                 <div class="bckg-frm rounded-3 p-5 col-md-7 col-lg-5 col-xl-5 offset-xl-1">
                     <form [formGroup]="loginForm" class="text-white" (ngSubmit)="submitData(loginForm)">
+                        <div *ngIf="errorMessage" class="alert alert-danger">
+                            {{errorMessage}}
+                        </div>
 
                         <h2 class="text-center">Login</h2>
                         <br>
-                        <!-- Email input -->
+                        <!-- email input -->
                         <div class="form-outline mb-1">
-                            <input type="email" id="form1Example13" class="form-control" />
-
-                            <label class="form-label" for="form1Example13">Email</label>
-
-                            <div *ngIf="loginForm.get('email')?.errors && loginForm.get('Email')?.touched"
+                            <label class="form-label" for="email">email</label>
+                            <input placeholder="Enter Your email address" type="email" formControlName="email" class="form-control" />
+                            <div *ngIf="loginForm.get('email')?.errors && loginForm.get('email')?.touched"
                                 class="alert alert-danger my-2">
-                                <p *ngIf="loginForm.get('Email')?.errors?.['required']">Email is required</p>
-                                <p *ngIf="loginForm.get('Email')?.errors?.['email']">Email is Invalid </p>
+                                <p *ngIf="loginForm.get('email')?.errors?.['required']">email is required</p>
+                                <p *ngIf="loginForm.get('email')?.errors?.['email']">email is Invalid </p>
                             </div>
 
                         </div>
 
-                        <!-- Password input -->
+                        <!-- password input -->
                         <div class="form-outline mb-1">
-                            <input type="password" id="form1Example23" class="form-control" />
+                            <label class="form-label" for="password">password</label>
+                            <input placeholder="Enter Your password" type="password" formControlName="password" class="form-control" />
 
-                            <label class="form-label" for="form1Example23">Password</label>
+
                             <div *ngIf="loginForm.get('password')?.errors && loginForm.get('password')?.touched"
                                 class="alert alert-danger my-2">
-                                <p *ngIf="loginForm.get('password')?.errors?.['required']">Password is required</p>
+                                <p *ngIf="loginForm.get('password')?.errors?.['required']">password is required</p>
                                 <p
                                     *ngIf="loginForm.get('password')?.errors?.['minLength'] && loginForm.get('password')?.errors?.['maxlength']">
-                                    Password is minlength 3 and max 10</p>
-                                <p *ngIf="loginForm.get('password')?.errors?.['pattern']">Password must contain A,a@</p>
+                                    password is minlength 3 and max 10</p>
+                                <p *ngIf="loginForm.get('password')?.errors?.['pattern']">password must contain A,a@</p>
                             </div>
                         </div>
 
@@ -46,14 +48,15 @@
 
 
                         <!-- Submit button -->
-                        <button [disabled]="loginForm.invalid" type="submit" (click)="Login()"
+                        <button [disabled]="loginForm.invalid" type="submit"
                             class="btn btn-primary btn-block">Login</button>
 
                         <div class="divider d-flex align-items-center mt-2">
                             <p class="text-center fw-bold mb-0 text-muted">OR</p>
                         </div>
                         <div class="my-1">
-                            <button class="btn btn-outline-primary"><a style="color: white; text-decoration:none;" routerLink="/register">Register Now</a></button>
+                            <button class="btn btn-outline-primary"><a style="color: white; text-decoration:none;"
+                                    routerLink="/register">Register Now</a></button>
                         </div>
 
 

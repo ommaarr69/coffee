@@ -10,15 +10,15 @@ import { CartService } from 'src/app/services/cart.service';
 export class HomeComponent implements OnInit {
 
   constructor(private cartService: CartService) { }
-  products:Products[]=[
-  
-  {Name:"Coffee" , Price:"100" , Description:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit exceptur"},
-  {Name:"Coffee" , Price:"100" , Description:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit exceptur"},
-  {Name:"Coffee" , Price:"100" , Description:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit exceptur"},
-  {Name:"Coffee" , Price:"100" , Description:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit exceptur"},
-  {Name:"Coffee" , Price:"100" , Description:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit exceptur"},
-  {Name:"Coffee" , Price:"100" , Description:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit exceptur"}
-];
+  products: Products[] = [
+
+    { Name: "Coffee", imgSrc: "../../../../assets/images/download.jfif", Price: "100", Description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit exceptur" },
+    { Name: "Coffee", imgSrc: "../../../../assets/images/download.jfif", Price: "100", Description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit exceptur" },
+    { Name: "Coffee", imgSrc: "../../../../assets/images/download.jfif", Price: "100", Description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit exceptur" },
+    { Name: "Coffee", imgSrc: "../../../../assets/images/download.jfif", Price: "100", Description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit exceptur" },
+    { Name: "Coffee", imgSrc: "../../../../assets/images/download.jfif", Price: "100", Description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit exceptur" },
+    { Name: "Coffee", imgSrc: "../../../../assets/images/download.jfif", Price: "100", Description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit exceptur" }
+  ];
 
   ngOnInit(): void {
   }
