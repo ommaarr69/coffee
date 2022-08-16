@@ -22,7 +22,7 @@
                   <i class="fas fa-minus"></i>
                 </button>
 
-                <input id="form1" min="0" name="quantity" value="2" type="number"
+                <input id="form1" min="0" name="quantity" value="1" type="number"
                   class="form-control form-control-sm" />
 
                 <button class="btn btn-link px-2"
@@ -34,7 +34,10 @@
                 <h5 class="mb-0">{{item.Price}} LE</h5>
               </div>
               <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+
                 <a class="text-danger "><i class="fas fa-trash fa-lg"></i></a>
+
+                <button (click)="RemoveItem(item)" class="text-danger"><i class="fas fa-trash fa-lg"></i></button>
               </div>
             </div>
           </div>
