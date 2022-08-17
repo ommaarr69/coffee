@@ -3,4 +3,6 @@ export interface Products {
     Name: string;
     Price: string;
     Description: string;
+    id:number;
+    count:number;
 }

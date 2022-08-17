@@ -12,34 +12,35 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class RegisterComponent implements OnInit {
 
   registerForm: FormGroup = new FormGroup({
-    first_name: new FormControl(null, [Validators.required, Validators.minLength(3), Validators.maxLength(10)]),
-    last_name: new FormControl(null, [Validators.required, Validators.minLength(3), Validators.maxLength(10)]),
+    userName: new FormControl(null, [Validators.required]),
 
     email: new FormControl(null, [Validators.required, Validators.email]),
-    password: new FormControl(null, [Validators.required, Validators.pattern(/^[A-Z][A-Za-z0-9]{8,16}$/)]),
-    age: new FormControl(null, [Validators.required, Validators.min(16), Validators.max(60)]),
-    // phone: new FormControl(null, [Validators.required, Validators.pattern(/^01[0125][0-9]{8}$/)]),
-    // address: new FormControl(null, [Validators.required, Validators.minLength(3)]),
+    password: new FormControl(null, [Validators.required]),
+
+    phoneNumber: new FormControl(null, [Validators.required]),
+    address: new FormControl(null, [Validators.required]),
   });
+
   errorMessage: string = '';
   constructor(private _Router: Router, private _AuthService: AuthService) { }
 
   ngOnInit(): void {
   }
+
   submitData(formData: FormGroup) {
     console.log(formData);
     this._AuthService.register(formData.value).subscribe(
       (res) => {
         console.log(res);
-        if (res.message == "success") {
-          this._Router.navigate(['/login']);
-        }
-        else {
-          this.errorMessage = res.message;
-        }
+
+        this._Router.navigate(['/login']);
+
+        
       },
       (err) => {
         console.log(err);
+        this.errorMessage = err.message;
+
       },
       () => {
         console.log("done");
