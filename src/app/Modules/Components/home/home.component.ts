@@ -13,13 +13,13 @@ export class HomeComponent implements OnInit {
   products: Products[] = [
 
     { Name: "Coffee", imgSrc: "../../../../assets/images/download.jfif", Price: "100", Description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit exceptur" },
-    { Name: "Coffee", imgSrc: "../../../../assets/images/download.jfif", Price: "100", Description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit exceptur" },
-    { Name: "Coffee", imgSrc: "../../../../assets/images/download.jfif", Price: "100", Description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit exceptur" },
-    { Name: "Coffee", imgSrc: "../../../../assets/images/download.jfif", Price: "100", Description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit exceptur" },
-    { Name: "Coffee", imgSrc: "../../../../assets/images/download.jfif", Price: "100", Description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit exceptur" },
-    { Name: "Coffee", imgSrc: "../../../../assets/images/download.jfif", Price: "100", Description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit exceptur" },
-    { Name: "Coffee", imgSrc: "../../../../assets/images/download.jfif", Price: "100", Description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit exceptur" },
-    { Name: "Coffee", imgSrc: "../../../../assets/images/download.jfif", Price: "100", Description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit exceptur" }
+    { Name: "Coffee", imgSrc: "../../../../assets/images/download.jfif", Price: "200", Description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit exceptur" },
+    { Name: "Coffee", imgSrc: "../../../../assets/images/download.jfif", Price: "150", Description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit exceptur" },
+    { Name: "Coffee", imgSrc: "../../../../assets/images/download.jfif", Price: "20", Description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit exceptur" },
+    { Name: "Coffee", imgSrc: "../../../../assets/images/download.jfif", Price: "190", Description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit exceptur" },
+    { Name: "Coffee", imgSrc: "../../../../assets/images/download.jfif", Price: "23", Description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit exceptur" },
+    { Name: "Coffee", imgSrc: "../../../../assets/images/download.jfif", Price: "16", Description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit exceptur" },
+    { Name: "Coffee", imgSrc: "../../../../assets/images/download.jfif", Price: "90", Description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit exceptur" }
   ];
 
   ngOnInit(): void {

@@ -4,15 +4,15 @@
             <div class="row d-flexalign-items-center justify-content-center">
                 <div class=" bckg-frm rounded-3 p-5 col-md-7 col-lg-5 col-xl-5 offset-xl-1">
                     <form [formGroup]="registerForm" class="text-white" (ngSubmit)="submitData(registerForm)">
-                        <div *ngIf="errorMessage" class="alert alert-danger">
+                        <div *ngIf="errorMessage" class="text-danger">
                             {{errorMessage}}
                         </div>
                         <h2 class="text-center">Register</h2>
                         <br>
                         <label for="first_name">First Name</label>
-                        <input formControlName="first_name" class="form-control" id="first_name">
+                        <input placeholder="Enter Your First Name" formControlName="first_name" class="form-control" id="first_name">
                         <div *ngIf="registerForm.get('first_name')?.errors && registerForm.get('first_name')?.touched"
-                            class="alert alert-danger my-2">
+                            class="text-danger my-2">
                             <p *ngIf="registerForm.get('first_name')?.errors?.['required']">first name is required</p>
                             <p *ngIf="registerForm.get('first_name')?.errors?.['minlength']">first name is minlength 3
                             </p>
@@ -21,9 +21,9 @@
                         </div>
 
                         <label for="last_name">Last Name</label>
-                        <input formControlName="last_name" class="form-control" id="last_name">
+                        <input placeholder="Enter Your Last Name" formControlName="last_name" class="form-control" id="last_name">
                         <div *ngIf="registerForm.get('last_name')?.errors && registerForm.get('last_name')?.touched"
-                            class="alert alert-danger my-2">
+                            class="text-danger my-2">
                             <p *ngIf="registerForm.get('last_name')?.errors?.['required']">Last Name is required</p>
                             <p *ngIf="registerForm.get('last_name')?.errors?.['minlength']">Last Name is minlength 3</p>
                             <p *ngIf="registerForm.get('last_name')?.errors?.['maxlength']">Last Name is maxlength 10
@@ -31,9 +31,9 @@
                         </div>
 
                         <label for="age">Age</label>
-                        <input formControlName="age" class="form-control" id="age">
+                        <input placeholder="Enter Your Age" formControlName="age" class="form-control" id="age">
                         <div *ngIf="registerForm.get('age')?.errors && registerForm.get('age')?.touched"
-                            class="alert alert-danger my-2">
+                            class="text-danger my-2">
                             <p *ngIf="registerForm.get('age')?.errors?.['required']">Age is required</p>
                             <p *ngIf="registerForm.get('age')?.errors?.['min']">Age is min 16</p>
                             <p *ngIf="registerForm.get('age')?.errors?.['max']">Age is max 60</p>
@@ -42,7 +42,7 @@
                             <label class="form-label" for="full_name">Full Name</label>
                             <input type="text" formControlName="full_name" class="form-control" />
                             <div *ngIf="registerForm.get('full_name')?.errors && registerForm.get('full_name')?.touched"
-                                class="alert alert-danger my-2">
+                                class="text-danger my-2">
                                 <p *ngIf="registerForm.get('full_name')?.errors?.['required']">Full name is required
                                 </p>
                                 <p *ngIf="registerForm.get('full_name')?.errors?.['minlength']">Full name is minlength
@@ -53,7 +53,7 @@
                             <label class="form-label" for="phone">Phone Number</label>
                             <input type="text" formControlName="phone" class="form-control" />
                             <div *ngIf="registerForm.get('phone')?.errors && registerForm.get('phone')?.touched"
-                                class="alert alert-danger my-2">
+                                class="text-danger my-2">
                                 <p *ngIf="registerForm.get('phone')?.errors?.['required']">Phone number is required
                                 </p>
                                 <p *ngIf="registerForm.get('phone')?.errors?.['pattern']">Phone number is Uncorrect</p>
@@ -62,9 +62,9 @@
                         <!-- Email input -->
                         <div class="form-outline mb-1">
                             <label class="form-label" for="email">Email address</label>
-                            <input type="email" formControlName="email" class="form-control" />
+                            <input placeholder="Enter Your Email" type="email" formControlName="email" class="form-control" />
                             <div *ngIf="registerForm.get('email')?.errors && registerForm.get('email')?.touched"
-                                class="alert alert-danger my-2">
+                                class="text-danger my-2">
                                 <p *ngIf="registerForm.get('email')?.errors?.['required']">Email is required</p>
                                 <p *ngIf="registerForm.get('email')?.errors?.['email']">Email is Invalid </p>
                             </div>
@@ -74,9 +74,9 @@
 
                         <div class="form-outline mb-1">
                             <label class="form-label" for="password">Password</label>
-                            <input type="password" formControlName="password" class="form-control" />
+                            <input placeholder="Enter Your Password" type="password" formControlName="password" class="form-control" />
                             <div *ngIf="registerForm.get('password')?.errors && registerForm.get('password')?.touched"
-                                class="alert alert-danger my-2">
+                                class="text-danger my-2">
                                 <p *ngIf="registerForm.get('password')?.errors?.['required']">Password is required
                                 </p>
                                 <p
@@ -92,7 +92,7 @@
                             <label class="form-label" for="address">Address</label>
                             <input type="text" formControlName="address" class="form-control" />
                             <div *ngIf="registerForm.get('Address')?.errors && registerForm.get('Address')?.touched"
-                                class="alert alert-danger my-2">
+                                class="text-danger my-2">
                                 <p *ngIf="registerForm.get('Address')?.errors?.['required']">Address is required</p>
                                 <p *ngIf="registerForm.get('Address')?.errors?.['minLength']">Address is minlength 3
                                 </p>

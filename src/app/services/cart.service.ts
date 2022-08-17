@@ -5,6 +5,9 @@ import { Products } from '../Products';
   providedIn: 'root'
 })
 export class CartService {
+  addProduct(i: number) {
+    throw new Error('Method not implemented.');
+  }
   items: Products[] = [];
 
   addToCart(product: Products) {
