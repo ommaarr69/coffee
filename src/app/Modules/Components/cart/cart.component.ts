@@ -11,15 +11,15 @@ import { CartService } from 'src/app/services/cart.service';
 export class CartComponent implements OnInit {
 
   constructor(private cartService: CartService) {
-    for(let i=0;i<this.items.length;i++){
-      this.TotalCount=this.TotalCount+parseInt(this.items[i].Price);
+    for (let i = 0; i < this.items.length; i++) {
+      this.TotalCount = this.TotalCount + parseInt(this.items[i].Price);
     }
-   }
+  }
   items = this.cartService.getItems();
-  TotalCount:number=0;
+  TotalCount: number = 0;
 
   ngOnInit(): void {
-    
+
   }
   RemoveItem(i: number) {
 
