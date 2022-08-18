@@ -40,7 +40,7 @@
                                 class="form-control" />
 
                             <div *ngIf="registerForm.get('email')?.errors && registerForm.get('email')?.touched"
-                                class="alert alert-danger my-2">
+                                class="text-danger my-2">
                                 <p *ngIf="registerForm.get('email')?.errors?.['required']">Email is required</p>
                             </div>
                         </div>
@@ -53,7 +53,7 @@
                                 class="form-control" />
 
                             <div *ngIf="registerForm.get('password')?.errors && registerForm.get('password')?.touched"
-                                class="alert alert-danger my-2">
+                                class="text-danger my-2">
                                 <p *ngIf="registerForm.get('password')?.errors?.['required']">Password is required
                                 </p>
 
@@ -62,10 +62,10 @@
 
                         <div class="form-outline mb-1">
                             <label class="form-label" for="address">Address</label>
-                            <input type="text" placeholder="Enter Yout Address" formControlName="address"
+                            <input type="text" placeholder="Enter Your Address" formControlName="address"
                                 class="form-control" />
                             <div *ngIf="registerForm.get('Address')?.errors && registerForm.get('Address')?.touched"
-                                class="alert alert-danger my-2">
+                                class="text-danger my-2">
                                 <p *ngIf="registerForm.get('Address')?.errors?.['required']">Address is required</p>
 
                             </div>
@@ -74,7 +74,7 @@
 
                         <!-- Submit button -->
                         <button type="submit" [disabled]="registerForm.invalid"
-                            class="btn btn-primary btn-block">Register</button>
+                            class="btn mt-2 btn-block btn-login">Register</button>
 
                     </form>
 
