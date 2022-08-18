@@ -26,7 +26,7 @@
                                 class="form-control" />
                             <div *ngIf="registerForm.get('phoneNumber')?.errors && registerForm.get('phoneNumber')?.touched"
                                 class="text-danger my-2">
-                                <p *ngIf="registerForm.get('phoneNumber')?.errors?.['required']">phoneNumber number is
+                                <p *ngIf="registerForm.get('phoneNumber')?.errors?.['required']">Phone Number is
                                     required
                                 </p>
 
@@ -61,12 +61,14 @@
                         </div>
 
                         <div class="form-outline mb-1">
-                            <label class="form-label" for="address">Address</label>
-                            <input type="text" placeholder="Enter Yout Address" formControlName="address"
+
+                            <label class="form-label" for="address">address</label>
+                            <input type="text" placeholder="Enter Your address" formControlName="address"
                                 class="form-control" />
-                            <div *ngIf="registerForm.get('Address')?.errors && registerForm.get('Address')?.touched"
-                                class="alert alert-danger my-2">
-                                <p *ngIf="registerForm.get('Address')?.errors?.['required']">Address is required</p>
+                            <div *ngIf="registerForm.get('address')?.errors && registerForm.get('address')?.touched"
+                                class="text-danger my-2">
+                                <p *ngIf="registerForm.get('address')?.errors?.['required']">address is required</p>
+
 
                             </div>
                         </div>
