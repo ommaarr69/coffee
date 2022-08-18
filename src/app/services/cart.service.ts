@@ -10,9 +10,12 @@ import { Products } from '../Products';
 })
 export class CartService {
   items: any
-  addToCart(product: Products) {
+  addToCart(product: any) {
     for (let i = 0; i < this.items.length; i++) {
-      if (this.items[i].id == product.id) {
+      if (this.items[i].name == product.name) {
+        this.items[i].count++;
+        localStorage.setItem('cart', JSON.stringify(this.items));
+        return;
 
       }
     }

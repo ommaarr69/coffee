@@ -12,7 +12,7 @@ export class CartComponent implements OnInit {
 
   constructor(private cartService: CartService) {
     for (let i = 0; i < this.items.length; i++) {
-      this.TotalCount = this.TotalCount + parseInt(this.items[i].price);
+      this.TotalCount = this.TotalCount +(this.items[i].count) * parseInt(this.items[i].price);
     }
   }
   items = this.cartService.getItems();
