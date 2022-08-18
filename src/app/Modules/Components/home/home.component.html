@@ -1,43 +1,26 @@
-
-<!-- <div class="row " style="background-color: antiquewhite; width:100%">
-    <div class="col-md-3 mt-2 p-3 shadow" *ngFor="let product of products">
-        <div class="item">
-
-            <img src="../../../../assets/images/download.jfif" class="w-100" alt="">
-            <h2>{{product.Name}}</h2>
-            <h5>Price: {{product.Price}}</h5>
-
-            <p>{{product.Description}}</p>
-
-            <button class="btn" (click)="addToCart(product)"><i class="fa-solid fa-cart-plus"></i> Add to cart</button>
-
-        </div>
-    </div>
-
-</div> -->
-
-<section class="py-5">
-    <div class="container px-4 px-lg-5 mt-5"  *ngFor="let product of products">
-        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-            <div class="col mb-5">
-                <div class="card h-100">
+<section>
+    <div class="container mt-2">
+        <div class="row row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div class="col-md-5 my-3 " *ngFor="let product of products">
+                <div class="card">
                     <!-- Product image-->
-                    <img class="card-img-top" src="../../../../assets/images/download.jfif" alt="..." />
+                    <img class="card-img-top w-100" [src]="product.image" alt="..." />
                     <!-- Product details-->
                     <div class="card-body p-4">
                         <div class="text-center">
                             <!-- Product name-->
-                            <h5 class="fw-bolder">{{product.Name}}</h5>
+                            <h5 class="fw-bolder">{{product.name}}</h5>
                             <!-- Product price-->
-                            {{product.Price}}
+                            Price : {{product.price}} L.E.
                         </div>
                     </div>
                     <!-- Product actions-->
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><button class="btn btn-outline-dark mt-auto" (click)="addToCart(product)">Add To Cart</button></div>
+                        <div class="text-center"><button class="btn btn-outline-dark mt-auto"
+                                (click)="addToCart(product)">Add To Cart</button></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-        </section>
+</section>

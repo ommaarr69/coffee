@@ -4,6 +4,9 @@
 
 export const environment = {
   production: false,
+  baseUrl : 'https://coffee-product.herokuapp.com/api/auth/',
+  baseUrlProducts : 'https://coffee-product.herokuapp.com/cof/v1/all'
+  
 };
 
 /*

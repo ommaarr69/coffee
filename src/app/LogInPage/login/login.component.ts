@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   loginForm: FormGroup = new FormGroup({
     email: new FormControl(null, [Validators.required, Validators.email]),
-    password: new FormControl(null, [Validators.required, Validators.pattern(/^[A-Z][A-Za-z0-9]{8,16}$/)]),
+    password: new FormControl(null, [Validators.required]),
   });
 
   errorMessage: string = '';
@@ -26,17 +26,15 @@ export class LoginComponent implements OnInit {
     this._AuthService.login(formData.value).subscribe(
       (res) => {
         console.log(res);
-        if (res.message == "success") {
-          localStorage.setItem('userToken', res.token)
-          this._AuthService.encodedData();
-          this._router.navigate(['../admin/home']);
-        }
-        else {
-          this.errorMessage = res.message;
-        }
+        localStorage.setItem('userToken', res.token)
+        localStorage.setItem('res', JSON.stringify(res))
+        this._AuthService.encodedData();
+        this._router.navigate(['../admin/home']);
+
       },
       (err) => {
         console.log(err);
+        this.errorMessage = err.message;
       },
       () => {
         console.log("done");
