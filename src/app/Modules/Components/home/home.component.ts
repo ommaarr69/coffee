@@ -17,15 +17,16 @@ export class HomeComponent implements OnInit {
     this._ProductsService.getProducts().subscribe(
       (res) => {
         this.products = res;
-        console.log(this.products);
+        const mapped = this.products.map((element) => ({
+          ...element,
+          count: 1
+        }));
+        this.products = mapped;
       })
 
+    console.log(this.products);
   }
-
   addToCart(product: Products) {
     this.cartService.addToCart(product);
   }
-
-
-
 }

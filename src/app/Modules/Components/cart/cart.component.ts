@@ -12,7 +12,7 @@ export class CartComponent implements OnInit {
 
   constructor(private cartService: CartService) {
     for (let i = 0; i < this.items.length; i++) {
-      this.TotalCount = this.TotalCount + parseInt(this.items[i].Price);
+      this.TotalCount = this.TotalCount + parseInt(this.items[i].price);
     }
   }
   items = this.cartService.getItems();
@@ -23,7 +23,7 @@ export class CartComponent implements OnInit {
   }
   RemoveItem(i: number) {
 
-    this.TotalCount = this.TotalCount - (parseInt(this.items[i].Price) * this.items[i].count);
+    this.TotalCount = this.TotalCount - (parseInt(this.items[i].price) * this.items[i].count);
     if (this.TotalCount <= 0) {
       this.TotalCount = 0;
     }
@@ -34,7 +34,7 @@ export class CartComponent implements OnInit {
 
   stepUp(i: number) {
     (this.items[i].count)++;
-    this.TotalCount = this.TotalCount + parseInt(this.items[i].Price);
+    this.TotalCount = this.TotalCount + parseInt(this.items[i].price);
 
     localStorage.setItem('cart', JSON.stringify(this.items));
     console.log(this.items);
@@ -47,7 +47,7 @@ export class CartComponent implements OnInit {
 
     }
 
-    this.TotalCount = this.TotalCount - parseInt(this.items[i].Price);
+    this.TotalCount = this.TotalCount - parseInt(this.items[i].price);
 
     if (this.TotalCount <= 0) {
       this.TotalCount = 0;
